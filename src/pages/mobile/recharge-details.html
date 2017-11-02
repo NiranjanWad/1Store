@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Mobile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <form>
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary" floating>Enter mobile number</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-card>
+        <ion-grid>
+
+            <ion-row>
+              <ion-col col-2><b>Recharge amount</b></ion-col>
+              <ion-col col-2><b>Description</b></ion-col>
+            </ion-row>
+          <ion-list *ngFor="let desc of descArr">
+            <ion-row>
+              <ion-col col-2>
+                <button ion-button color="light" full>{{desc.id}}</button>
+              </ion-col>
+              <ion-col col-10>{{desc.value}}</ion-col>
+            </ion-row>
+          </ion-list>
+
+        </ion-grid>
+      </ion-card>
+    </ion-list>
+  </form>
+</ion-content>
