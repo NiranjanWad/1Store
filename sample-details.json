@@ -1,0 +1,27 @@
+{ "TMobile": [
+  {
+  "amount": "$20",
+  "description": "2GB 4G data,validity 30 days"
+  },
+  {
+    "amount": "$33",
+    "description": "6GB 4G data and unlimited 3G later,validity 30 days"
+  },
+  {
+    "amount": "$35",
+    "description": "10GB 4B data and unlimited 3G later,validity 30 days"
+  },
+  {
+    "amount": "$40",
+    "description": "6GB 4G data with India calling and unlimited 3G data,validity 30 days"
+  },
+  {
+    "amount": "$45",
+    "description": "6GB 4G data with India calling and unlimited 3G data,validiy 30 days"
+  },
+  {
+    "amount": "$50",
+    "description": "Unlimited 4G data, validity 30 days"
+  }
+]
+}

@@ -7,7 +7,9 @@ import { MobilePage } from '../pages/mobile/mobile.component'
 import { AngularFireModule} from 'angularfire2';
 import { Data } from '../providers/data';
 import {RegisterPage} from "../pages/register/register";
-import {RechargeDetailsComponent} from "../pages/mobile/recharge-details.component";
+import {RechargeDetailsComponent} from "../pages/mobile/rechargeDetails.component";
+
+
 
 export const fireBaseConfig ={
   apiKey: "AIzaSyDiZpt9UT6Uk-7JmKEfn1tlhrgcy5qjA7I",
@@ -25,6 +27,7 @@ export const fireBaseConfig ={
     MobilePage,
     RegisterPage,
     RechargeDetailsComponent
+
   ],
   imports: [
     IonicModule.forRoot(MyApp),
