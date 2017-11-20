@@ -28,6 +28,7 @@ password: any;
       content: 'Authenticating...'
     })
     this.menu.enable(false);
+    console.log(this.customerDetails.username,this.customerDetails.password);
   }
 
   ionViewDidLoad() {
