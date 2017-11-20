@@ -21,21 +21,35 @@ ngOnInit(){
 }
 onSubmit(){
   //console.log(this.mobile);
-  let pattern="[1-9]{1}[0-9]{9}";
-  // let a1 = "[a-z]{11}";
-  
-  
- if(this.mobile ==null || this.mobile.length!=10) {
-    let alert = this.alertCtrl.create({
+//   let pattern="[1-9]{1}[0-9]{9}";  
+//  if(this.mobile ==null || this.mobile.length!=12) {
+//     let alert = this.alertCtrl.create({
+//         title: "Invalid Number",
+//         message: "Enter a Valid Number",
+//         buttons: ["OK"]
+//       });
+//     alert.present();}
+//   else 
+    //if(this.mobile.match(pattern) && this.mobile.length==12){
+      var isphone = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(this.mobile);
+      if(isphone==true){
+        console.log(this.mobile);
+        let alert = this.alertCtrl.create({
+          message:"true",
+          buttons: ["OK"]
+        });
+      alert.present();
+      }
+    else{
+      let alert = this.alertCtrl.create({
         title: "Invalid Number",
         message: "Enter a Valid Number",
         buttons: ["OK"]
       });
-    alert.present();}
-  else 
-    if(this.mobile.match(pattern) && this.mobile.length==10){
-      console.log(this.mobile);
+    alert.present();
     }
+      
+   // }
   }  
 }
 
