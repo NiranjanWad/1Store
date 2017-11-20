@@ -1,6 +1,7 @@
 import {Component, OnInit} from  "@angular/core";
 import {RechargeDetailsService} from "./rechargeDetails.service";
 import {FirebaseListObservable} from  "angularfire2";
+import { NavParams } from 'ionic-angular';
 @Component({
   selector: 'app-recharge-details',
   templateUrl: 'rechargeDetails.component.html',
@@ -8,11 +9,12 @@ import {FirebaseListObservable} from  "angularfire2";
 })
 export class RechargeDetailsComponent implements OnInit {
 rechargeDetails: FirebaseListObservable<any[]>;
-
-constructor(private details: RechargeDetailsService){}
+id: string;
+constructor(private details: RechargeDetailsService, private  navParam: NavParams){}
 
 ngOnInit(){
-  this.rechargeDetails = this.details.getDetails();
+  this.id = this.navParam.get('param');
+  this.rechargeDetails = this.details.getDetails(this.id);
 }
 
 }

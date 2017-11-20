@@ -8,11 +8,12 @@ export class RechargeDetailsService {
 
 
   constructor(private angFire: AngularFireDatabase){
-    this.networkDetails = angFire.list('/TMobile');
-    // console.log(this.ntwrkProvider);
+
   }
 
-  getDetails(){
+  getDetails(id){
+    this.networkDetails = this.angFire.list('/'+id);
+    console.log("Niranjan#####"+this.networkDetails);
     return this.networkDetails;
   }
 }

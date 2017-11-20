@@ -34,7 +34,7 @@ export class MobilePage{
 
   onSelect(imgId){
       this.storeId = imgId;
-      this.navCtrl.push(RechargeDetailsComponent);
+      this.navCtrl.push(RechargeDetailsComponent,{param: this.storeId});
 
   }
 
