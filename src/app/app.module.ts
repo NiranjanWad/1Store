@@ -8,8 +8,12 @@ import { AngularFireModule} from 'angularfire2';
 import { Data } from '../providers/data';
 import {RegisterPage} from "../pages/register/register";
 import {RechargeDetailsComponent} from "../pages/mobile/rechargeDetails.component";
+import { PaymentPage } from '../pages/payment/payment.component';
 
-
+export const stripeConfig = {
+  production: false,
+  stripeKey: 'pk_test_AGjDkveo2MDDeJmJBqVn69Zi',
+}
 
 export const fireBaseConfig ={
   apiKey: "AIzaSyDiZpt9UT6Uk-7JmKEfn1tlhrgcy5qjA7I",
@@ -26,7 +30,8 @@ export const fireBaseConfig ={
     LoginPage,
     MobilePage,
     RegisterPage,
-    RechargeDetailsComponent
+    RechargeDetailsComponent,
+    PaymentPage,
 
   ],
   imports: [
@@ -40,7 +45,8 @@ export const fireBaseConfig ={
     LoginPage,
     MobilePage,
     RegisterPage,
-    RechargeDetailsComponent
+    RechargeDetailsComponent,
+    PaymentPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Data]
 })

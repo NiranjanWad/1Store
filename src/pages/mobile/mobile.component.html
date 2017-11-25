@@ -7,26 +7,15 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Mobile</ion-title>
+    <ion-title>Select Network Provider</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
   <form>
-    <ion-card>
-      <ion-card-header>
-        Select Network Provider
-      </ion-card-header>
-    </ion-card>
-      <ion-list *ngFor="let img of imgPath">
-        <button ion-button color="light" full large (click)="onSelect(img.id)">
+      <ion-item *ngFor="let img of imgPath" (click)="onSelect(img.id)">
             <img style="width: 40%" src={{img.name}}>
-        </button>
-      </ion-list>
-    <!--<h2>{{details.amount}}</h2>-->
-   <!--<div *ngFor="let data of details">-->
-     <!--<h2>data</h2>-->
-   <!--</div>-->
+      </ion-item>
   </form>
 </ion-content>

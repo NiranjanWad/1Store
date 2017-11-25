@@ -22,7 +22,8 @@
           <ion-list *ngFor="let data of rechargeDetails | async">
             <ion-row>
               <ion-col col-2>
-                <button ion-button color="light" full>{{data.amount}}</button>
+                <!--<button ion-button (click)="checkout(data.amount)" full clear>{{data.amount}}</button>-->
+                <ion-item (click)="checkout(data.amount)">{{data.amount}}</ion-item>
               </ion-col>
               <ion-col col-10>{{data.description}}</ion-col>
             </ion-row>
