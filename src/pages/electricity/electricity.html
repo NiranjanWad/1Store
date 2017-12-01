@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Select Providers</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Select Provider</ion-label>
+    <ion-select [(ngModel)]="elecProviders">
+      <ion-option  *ngFor=" let providers of electricityProviderNames | async" value={{providers.name}}>
+        {{providers.name}}
+      </ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-input #consNum placeholder="Consumer Number" [(ngModel)]="consumerNum"></ion-input>
+  </ion-item>
+
+  <ion-buttons padding>
+    <button ion-button (click)="getBillDetails(elecProviders, consNum.value)" block> Proceed </button>
+  </ion-buttons>
+</ion-content>

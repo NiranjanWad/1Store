@@ -1,0 +1,15 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Bill Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p>The bill for Consumer Number {{consumerNum}} is ${{billAmt}}</p>
+  <ion-buttons>
+    <button ion-button (click)="pay(billAmt)" block>Proceed To Checkout</button>
+  </ion-buttons>
+</ion-content>

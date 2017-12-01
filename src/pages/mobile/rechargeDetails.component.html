@@ -7,14 +7,13 @@
 </ion-header>
 <ion-content padding>
   <form>
-    <ion-list>
       <ion-item>
         <ion-label color="primary" floating>Enter mobile number</ion-label>
         <ion-input></ion-input>
       </ion-item>
+    <ion-list>
       <ion-card>
         <ion-grid>
-
           <ion-row>
             <ion-col col-2><b>Recharge amount</b></ion-col>
             <ion-col col-2><b>Description</b></ion-col>
@@ -22,7 +21,7 @@
           <ion-list *ngFor="let data of rechargeDetails | async">
             <ion-row>
               <ion-col col-2>
-                <!--<button ion-button (click)="checkout(data.amount)" full clear>{{data.amount}}</button>-->
+                <!--<button ion-button clear full>{{data.amount}}</button>-->
                 <ion-item (click)="checkout(data.amount)">{{data.amount}}</ion-item>
               </ion-col>
               <ion-col col-10>{{data.description}}</ion-col>

@@ -1,53 +1,44 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      <ion-icon name="contact" left>One Store</ion-icon>
-    </ion-title><form>
-    <ion-card>
-      <ion-card-header>
-        New Payment
-      </ion-card-header>
-      <ion-grid>
-        <ion-row>
-          <ion-col col-3 align-self-center>
-            <ion-buttons>
-              <button ion-button (click)="openMobileForm()" clear padding><ion-icon name="phone-portrait"></ion-icon></button>
-              <ion-label text-center> Mobile </ion-label>
-            </ion-buttons>
-          </ion-col>
-
-
-          <ion-col col-3>
-            <ion-buttons>
-              <button ion-button clear padding><ion-icon name="bulb"></ion-icon></button>
-              <ion-label text-center> Electricity </ion-label>
-            </ion-buttons>
-          </ion-col>
-
-
-          <ion-col col-3>
-            <ion-buttons>
-              <button ion-button clear padding> <ion-icon name="train"></ion-icon></button>
-              <ion-label text-center> PATH </ion-label>
-            </ion-buttons>
-          </ion-col>
-
-
-          <ion-col col-3>
-            <ion-buttons>
-              <button ion-button clear padding> <ion-icon name="wifi"></ion-icon></button>
-              <ion-label text-center> Internet </ion-label>
-            </ion-buttons>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-
-    </ion-card>
-
-  </form>
+      <ion-icon name="contact" icon-left>One Store</ion-icon>
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <form>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3 align-self-center>
+           <ion-buttons>
+              <button ion-button (click)="openMobileForm()" clear padding><ion-icon name="phone-portrait"></ion-icon></button>
+              <ion-label text-center> Mobile </ion-label>
+           </ion-buttons>
+          </ion-col>
+        <ion-col col-3>
+            <ion-buttons>
+              <button ion-button (click)="openElectricityForm()" clear padding><ion-icon name="bulb"></ion-icon></button>
+              <ion-label text-center> Electricity </ion-label>
+            </ion-buttons>
+        </ion-col>
 
+
+        <ion-col col-3>
+            <ion-buttons>
+              <button ion-button clear padding> <ion-icon name="train"></ion-icon></button>
+              <ion-label text-center> PATH </ion-label>
+            </ion-buttons>
+        </ion-col>
+
+
+        <ion-col col-3>
+            <ion-buttons>
+              <button ion-button clear padding> <ion-icon name="wifi"></ion-icon></button>
+              <ion-label text-center> Internet </ion-label>
+            </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
 </ion-content>
