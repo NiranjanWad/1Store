@@ -19,7 +19,7 @@ ngOnInit(){
 }
 
 checkout(amount){
-  this.navCtrl.push(PaymentPage,{param: amount});
+  this.navCtrl.push(PaymentPage,{param: amount*100});
 }
 
 }

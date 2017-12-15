@@ -7,6 +7,7 @@ import { RegisterPage } from '../register/register'
 import { Facebook } from 'ionic-native';
 import {Data} from "../../providers/data";
 import {AuthProviders, AuthMethods} from 'angularfire2';
+import {TabsPage} from "../tabs/tabs";
 /*
   Generated class for the Login page.
 
@@ -115,7 +116,7 @@ password: any;
           picture: response.auth.photoURL
         };
         window.localStorage.setItem('currentUser', JSON.stringify(currentUser));
-        let modal = this.modalCtr.create(HomePage);
+        let modal = this.modalCtr.create(TabsPage);
         modal.present();
       }).catch((error) => {
         let alert = this.alertCtrl.create({

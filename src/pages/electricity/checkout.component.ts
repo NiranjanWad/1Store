@@ -20,7 +20,7 @@ export class CheckoutPage{
   }
 
   pay(billAmt){
-    this.navCtrl.push(PaymentPage,{param: billAmt});
+    this.navCtrl.push(PaymentPage,{param: (billAmt) *100});
   }
 
 

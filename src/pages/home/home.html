@@ -3,6 +3,11 @@
     <ion-title>
       <ion-icon name="contact" icon-left>One Store</ion-icon>
     </ion-title>
+    <!--<ion-buttons start>-->
+      <!--<button ion-button icon-only (click)="openMenu()">-->
+        <!--<ion-icon name="menu"></ion-icon>-->
+      <!--</button>-->
+    <!--</ion-buttons>-->
   </ion-navbar>
 </ion-header>
 
@@ -34,7 +39,7 @@
 
         <ion-col col-3>
             <ion-buttons>
-              <button ion-button clear padding> <ion-icon name="wifi"></ion-icon></button>
+              <button ion-button (click)="openInternetForm()" clear padding> <ion-icon name="wifi"></ion-icon></button>
               <ion-label text-center> Internet </ion-label>
             </ion-buttons>
         </ion-col>
@@ -42,3 +47,5 @@
     </ion-grid>
   </form>
 </ion-content>
+
+

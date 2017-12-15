@@ -11,6 +11,10 @@ import {RechargeDetailsComponent} from "../pages/mobile/rechargeDetails.componen
 import { PaymentPage } from '../pages/payment/payment.component';
 import { ElectricityPage } from '../pages/electricity/electricity';
 import { CheckoutPage } from '../pages/electricity/checkout.component';
+import { InternetPage } from '../pages/internet/internet';
+import { AboutPage } from '../pages/about/about';
+import {TabsPage} from "../pages/tabs/tabs";
+import {PaymentHistoryPage} from "../pages/payment-history/payment-history";
 
 export const stripeConfig = {
   production: false,
@@ -36,6 +40,10 @@ export const fireBaseConfig ={
     PaymentPage,
     ElectricityPage,
     CheckoutPage,
+    InternetPage,
+    AboutPage,
+    TabsPage,
+    PaymentHistoryPage
 
   ],
   imports: [
@@ -52,7 +60,11 @@ export const fireBaseConfig ={
     RechargeDetailsComponent,
     PaymentPage,
     ElectricityPage,
-    CheckoutPage
+    CheckoutPage,
+    InternetPage,
+    AboutPage,
+    TabsPage,
+    PaymentHistoryPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},Data]
 })

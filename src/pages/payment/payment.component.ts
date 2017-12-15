@@ -33,14 +33,14 @@ export class PaymentPage implements OnInit{
       image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
       locale: 'auto',
       token : token => {
-        this.paymentService.processPayment(token,this.amount)
+        this.paymentService.processPayment(token,(this.amount))
       }
     });
 
     this.handler.open({
       name: 'FireStarter',
       description: 'Deposit funds to Account',
-      amount: this.amount
+      amount: (this.amount)
     });
 
   }
